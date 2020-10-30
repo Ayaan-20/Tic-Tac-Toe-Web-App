@@ -2,7 +2,7 @@
   TicTacToe is a web app made with streamlit that allows two-player gameplay. It is deployed on heroku platform.
   
 ## Web App Link
-Link: [TIC TAC TOE](https://tictactoe-t3.herokuapp.com/)
+Link: [TIC TAC TOE 💠'](https://tictactoe-t3.herokuapp.com/)
 
 ## Installation And Usage
 1. Installation
