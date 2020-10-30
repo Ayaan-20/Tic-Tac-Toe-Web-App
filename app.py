@@ -1,6 +1,6 @@
 import streamlit as st
 
-# v = ●
+
 # Making the layout of the page
 st.beta_set_page_config(page_title='TIC TAC TOE', page_icon='💠', layout='wide', initial_sidebar_state='collapsed')
 
