@@ -399,7 +399,6 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         st.success("Player 1 turn :" + '⭕' + ". Move to which place ?")
                     else:
                         st.warning("Player 2 turn :" + '✖️' + ". Move to which place ?")
-
                 # Displaying the board
                 displayBoard(tic_tac_board)
 
@@ -431,7 +430,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     # Upper row winning condition
                     if tic_tac_board['1'] == tic_tac_board['2'] == tic_tac_board['3'] != '_':
                         displayBoard(tic_tac_board)
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
@@ -442,7 +441,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     elif tic_tac_board['4'] == tic_tac_board['5'] == tic_tac_board['6'] != '_':
                         displayBoard(tic_tac_board)
 
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
@@ -453,7 +452,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     elif tic_tac_board['7'] == tic_tac_board['8'] == tic_tac_board['9'] != '_':
                         displayBoard(tic_tac_board)
 
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
@@ -464,7 +463,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     elif tic_tac_board['1'] == tic_tac_board['4'] == tic_tac_board['7'] != '_':
                         displayBoard(tic_tac_board)
 
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
@@ -475,7 +474,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     elif tic_tac_board['2'] == tic_tac_board['5'] == tic_tac_board['8'] != '_':
                         displayBoard(tic_tac_board)
 
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
@@ -486,7 +485,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     elif tic_tac_board['3'] == tic_tac_board['6'] == tic_tac_board['9'] != '_':
                         displayBoard(tic_tac_board)
 
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
@@ -497,7 +496,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     elif tic_tac_board['3'] == tic_tac_board['5'] == tic_tac_board['7'] != '_':
                         displayBoard(tic_tac_board)
 
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
@@ -507,7 +506,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     # Diagonal2 winning condition
                     elif tic_tac_board['1'] == tic_tac_board['5'] == tic_tac_board['9'] != '_':
                         displayBoard(tic_tac_board)
-                        if turn == '✖':
+                        if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
                             st.text("\nGame Over for : " + '✖️ 😭')
