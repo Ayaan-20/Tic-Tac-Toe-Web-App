@@ -321,6 +321,7 @@ elif selection == 'TIC TAC TOE 💠':
             pass
 
     game()
+# TIC TAC TOE GAME (mobile layout)
 elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
     # Using dictionary for easier construction of the board as well as the logic
     # The value is set to "__" as it is going to help in the construction of the board
@@ -370,35 +371,35 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
         # Putting the whole logic program into the try except blocks so it doesn't show any error in the streamlit page
         try:
             # choice to choose between the marker "X" and "O"
-            player_marker = st.selectbox("WHICH MARKER DO YOU NEED PLAYER 1 ? 'X' OR 'O' : ", ['✖', '🉑'])
+            player_marker = st.selectbox("WHICH MARKER DO YOU NEED PLAYER 1 ? 'X' OR 'O' : ", ['✖️', '⭕'])
 
             # Assigning the turn according to the choice from the user between the markers.
-            if player_marker == '✖':
-                turn = '✖'
+            if player_marker == '✖️':
+                turn = '✖️'
             else:
-                turn = '🉑'
+                turn = '⭕'
 
             # Keeping count of the turns that user did
             chance_counter = 0
 
             # Giving user 9 chances as the board consist of 9 places
             i = 0
-            while i < 10:
+            while 1 < 10:
                 displayBoard(tic_tac_board)
                 # Displaying which player turn is it
                 # For user who decides to choose the marker "X"
-                if player_marker == '✖':
-                    if turn == '✖':
-                        st.success("Player 1 turn : " + '✖' + ". Move to which place ?")
+                if player_marker == '✖️':
+                    if turn == '✖️':
+                        st.success("Player 1 turn : " + '✖️' + ". Move to which place ?")
                     else:
-                        st.warning("Player 2 turn : " + '🉑' + ". Move to which place ?")
+                        st.warning("Player 2 turn : " + '⭕' + ". Move to which place ?")
 
                 # For user who decides to choose the marker "O"
                 else:
-                    if turn == '🉑':
-                        st.success("Player 1 turn :" + '🉑' + ". Move to which place ?")
+                    if turn == '⭕':
+                        st.success("Player 1 turn :" + '⭕' + ". Move to which place ?")
                     else:
-                        st.warning("Player 2 turn :" + '✖' + ". Move to which place ?")
+                        st.warning("Player 2 turn :" + '✖️' + ". Move to which place ?")
 
                 # User's choice to move to which place
                 players_move = st.text_input(f'TURN {i + 1}')
@@ -428,9 +429,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     if tic_tac_board['1'] == tic_tac_board['2'] == tic_tac_board['3'] != '_':
                         displayBoard(tic_tac_board)
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text("❖❖❖❖" + turn + " won. ❖❖❖❖")
                         break
 
@@ -439,9 +440,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         displayBoard(tic_tac_board)
 
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text("❖❖❖❖" + turn + " won. ❖❖❖❖")
                         break
 
@@ -450,9 +451,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         displayBoard(tic_tac_board)
 
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text("❖❖❖❖" + turn + " won. ❖❖❖❖")
                         break
 
@@ -461,9 +462,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         displayBoard(tic_tac_board)
 
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text("❖❖❖❖" + turn + " won. ❖❖❖❖")
                         break
 
@@ -472,9 +473,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         displayBoard(tic_tac_board)
 
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text("❖❖❖❖" + turn + " won. ❖❖❖❖")
                         break
 
@@ -483,9 +484,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         displayBoard(tic_tac_board)
 
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text("❖❖❖❖" + turn + " won. ❖❖❖❖")
                         break
 
@@ -494,9 +495,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         displayBoard(tic_tac_board)
 
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text("❖❖❖❖" + turn + " won. ❖❖❖❖")
                         break
 
@@ -504,9 +505,9 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     elif tic_tac_board['1'] == tic_tac_board['5'] == tic_tac_board['9'] != '_':
                         displayBoard(tic_tac_board)
                         if turn == '✖':
-                            st.text("\nGame Over for : " + '🉑 😭')
+                            st.text("\nGame Over for : " + '⭕ 😭')
                         else:
-                            st.text("\nGame Over for : " + '✖ 😭')
+                            st.text("\nGame Over for : " + '✖️ 😭')
                         st.text(" ❖❖❖❖ " + turn + " won. ❖❖❖❖")
                         break
 
@@ -518,10 +519,10 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                     break
 
                 # changing the Turn from "X" to "O" and vice versa
-                if turn == '✖':
-                    turn = '🉑'
+                if turn == '✖️':
+                    turn = '⭕'
                 else:
-                    turn = '✖'
+                    turn = '✖️'
 
             # "play again" text made using html
             home_inf1 = '''<div
