@@ -385,7 +385,6 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
             # Giving user 9 chances as the board consist of 9 places
             i = 0
             while 1 < 10:
-                displayBoard(tic_tac_board)
                 # Displaying which player turn is it
                 # For user who decides to choose the marker "X"
                 if player_marker == '✖️':
@@ -400,6 +399,10 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         st.success("Player 1 turn :" + '⭕' + ". Move to which place ?")
                     else:
                         st.warning("Player 2 turn :" + '✖️' + ". Move to which place ?")
+
+                # Displaying the board
+                displayBoard(tic_tac_board)
+
 
                 # User's choice to move to which place
                 players_move = st.text_input(f'TURN {i + 1}')
