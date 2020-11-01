@@ -346,23 +346,23 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
         pl1, pl2, pl3, pl4 = st.beta_columns(4)
 
         # Template for reference
-        pl1.text('━━━━━━━')
+
         pl1.text('1|2|3')
         pl1.text('')
         pl1.text('4|5|6')
         pl1.text('')
         pl1.text('7|8|9')
-        pl1.text('━━━━━━━')
+
         pl1.markdown('### TEMPLATE ↑')
 
         # Board for TIC TAC TOE
-        pl2.text('━━━━━━━━━')
+
         pl2.text('┃.' + board['1'] + '.┃.' + board['2'] + '.┃.' + board['3'] + '.┃')
         pl2.text('')
         pl2.text('┃.' + board['4'] + '.┃.' + board['5'] + '.┃.' + board['6'] + '.┃')
         pl2.text('')
         pl2.text('┃.' + board['7'] + '.┃.' + board['8'] + '.┃.' + board['9'] + '.┃')
-        pl2.text('━━━━━━━━━')
+
         pl2.markdown('### 💠 BOARD 💠 ')
 
 
