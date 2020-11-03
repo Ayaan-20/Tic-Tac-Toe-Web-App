@@ -13,7 +13,7 @@ if selection == 'Home 🏠':
     # Background colour and fonts made by using html
     # 1st box using html
     home_info = '''<div
-     style="background-image: linear-gradient(to left, #fffd80,#f63366);padding:10px;border-radius:15px">
+     style="background-image: linear-gradient(to left,#F27121, #E94057);padding:10px;border-radius:15px">
     <h2 
     style="color:white;text-align:center;font-size:20px"> TIK TAC TOE : PLAY WITH YOUR FRIENDS ☺️ <BR> A SIMPLE FUN 
     GAME WHICH YOU CAN PLAY INFINITE TIMES FOR FREE !!!! 😍
