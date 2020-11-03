@@ -13,7 +13,7 @@ if selection == 'Home 🏠':
     # Background colour and fonts made by using html
     # 1st box using html
     home_info = '''<div
-     style="background-color:#4286f4;padding:10px;border-radius:15px">
+     style="background-image: linear-gradient(to left, #fffd80,#f63366);padding:10px;border-radius:15px">
     <h2 
     style="color:white;text-align:center;font-size:20px"> TIK TAC TOE : PLAY WITH YOUR FRIENDS ☺️ <BR> A SIMPLE FUN 
     GAME WHICH YOU CAN PLAY INFINITE TIMES FOR FREE !!!! 😍
@@ -46,7 +46,7 @@ if selection == 'Home 🏠':
     # 4th box to make the page look vibrant using html
     st.text('')
     fun1 = '''<div
-       style="background-color: tomato;padding:10px;border-radius:20px">
+       style="background-image: linear-gradient(to left,#FF416C, #FF4B2B);padding:10px;border-radius:20px">
        <h2 
        style="color:white;text-align:center;font-size:20px">✖️<BR>✖️✖️<BR>✖️✖️️✖️<BR>✖️ ━━━️ ✖️
        </h2> 
@@ -58,7 +58,7 @@ elif selection == 'About 📜':
 
     # simple html code to make the page vibrant
     about_info1 = '''<div
-    style="background-color:tomato;padding:10px;border-radius:9px">
+    style="background-image: linear-gradient(to left,#021B79, #1CB5E0);padding:10px;border-radius:9px">
     </div> '''
 
     st.markdown(about_info1, unsafe_allow_html=True)
@@ -76,7 +76,7 @@ elif selection == 'About 📜':
 
     # simple html code to make the page vibrant
     about_info3 = '''<div
-    style="background-color:tomato;padding:10px;border-radius:9px">
+    style="background-image: linear-gradient(to right,#0575E6, #1CB5E0);padding:10px;border-radius:9px">
     </div> '''
     st.markdown(about_info3, unsafe_allow_html=True)
     st.text('')
@@ -108,7 +108,7 @@ elif selection == 'TIC TAC TOE 💠':
 
     # Main heading for the game using html
     tic_tac_selected = '''<div
-    style="background-color:#4286f4;padding:10px;border-radius:15px">
+    style="background-image: linear-gradient(to left,#0083B0, #12c2e9);padding:10px;border-radius:15px">
     <h2 
     style="color:white;text-align:center;font-size:20px"> 🤩 TIC TAC TOE 🤩
     </h2>
@@ -302,7 +302,7 @@ elif selection == 'TIC TAC TOE 💠':
 
             # "play again" text made using html
             home_inf1 = '''<div
-            style="background-color:#BDFFF3;padding:10px;border-radius:15px">
+            style="background-image: linear-gradient(to left,#00B4DB,#78ffd6);padding:10px;border-radius:15px">
             <h2 
             style="color:black;text-align:center;font-size:20px"> TO PLAY AGAIN 🤩 :- REFRESH THE PAGE 🖱️
             </h2> 
@@ -331,7 +331,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
 
     # Main heading for the game using html
     tic_tac_selected = '''<div
-        style="background-color:#4286f4;padding:10px;border-radius:15px">
+        style="background-image: linear-gradient(to left,#F27121, #E94057);padding:10px;border-radius:15px">
         <h2 
         style="color:white;text-align:center;font-size:20px"> 🤩 TIC TAC TOE 🤩
         </h2>
@@ -528,7 +528,7 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
 
             # "play again" text made using html
             home_inf1 = '''<div
-                style="background-color:#BDFFF3;padding:10px;border-radius:15px">
+                style="background-image: linear-gradient(to left,#00B4DB,#78ffd6);padding:10px;border-radius:15px">
                 <h2 
                 style="color:black;text-align:center;font-size:20px"> TO PLAY AGAIN 🤩 :- REFRESH THE PAGE 🖱️
                 </h2> 
