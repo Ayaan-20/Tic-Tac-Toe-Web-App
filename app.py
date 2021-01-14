@@ -2,7 +2,7 @@ import streamlit as st
 from streamlit_disqus import st_disqus
 # v = ●
 # Making the layout of the page
-st.beta_set_page_config(page_title='TIC TAC TOE', page_icon='💠', layout='wide', initial_sidebar_state='collapsed')
+st.set_page_config(page_title='TIC TAC TOE', page_icon='💠', layout='wide', initial_sidebar_state='collapsed')
 # Sidebar layout
 st.sidebar.header('MENU 🔘')
 selection = st.sidebar.selectbox('', ['Home 🏠', 'TIC TAC TOE 💠', 'TIC TAC TOE 💠 (mobile _layout)', 'About 📜','Comments 📝'])
