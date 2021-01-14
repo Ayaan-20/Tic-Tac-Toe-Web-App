@@ -544,4 +544,4 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
     game()
 
 elif selection == 'Comments 📝':
-    st_disqus("tic tac toe opinions")
+    st_disqus("tic-tac-toe-opinions")
