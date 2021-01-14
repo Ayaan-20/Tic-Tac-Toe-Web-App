@@ -1,12 +1,11 @@
 import streamlit as st
-
+from streamlit_disqus import st_disqus
 # v = ●
 # Making the layout of the page
 st.beta_set_page_config(page_title='TIC TAC TOE', page_icon='💠', layout='wide', initial_sidebar_state='collapsed')
-
 # Sidebar layout
 st.sidebar.header('MENU 🔘')
-selection = st.sidebar.selectbox('', ['Home 🏠', 'TIC TAC TOE 💠','TIC TAC TOE 💠 (mobile _layout)', 'About 📜'])
+selection = st.sidebar.selectbox('', ['Home 🏠', 'TIC TAC TOE 💠', 'TIC TAC TOE 💠 (mobile _layout)', 'About 📜','Comments 📝'])
 
 # Home page layout
 if selection == 'Home 🏠':
@@ -15,8 +14,8 @@ if selection == 'Home 🏠':
     home_info = '''<div
      style="background-image: linear-gradient(to left,#F27121, #E94057);padding:10px;border-radius:15px">
     <h2 
-    style="color:white;text-align:center;font-size:20px"> TIK TAC TOE : PLAY WITH YOUR FRIENDS ☺️ <BR> A SIMPLE FUN 
-    GAME WHICH YOU CAN PLAY INFINITE TIMES FOR FREE !!!! 😍
+    style="color:white;text-align:center;font-size:20px"> TIK TAC TOE <BR> A SIMPLE FUN 
+    TWO PLAYER GAME !!!! 😍
     </h2> 
     </div> '''
     st.markdown(home_info, unsafe_allow_html=True)
@@ -82,11 +81,11 @@ elif selection == 'About 📜':
     st.text('')
 
     # git hub link in the form of button
-    st.header('Link - '+'[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github)](https://github.com/Ayaan-20)')
+    st.header(
+        'Link - ' + '[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github)](https://github.com/Ayaan-20)')
 
     more_about = st.button('● More to know ● ')
     if more_about:
-
         more = '''<div
         style="background-color: white;padding:10px;border-radius:20px"> 
         <h2 
@@ -144,6 +143,7 @@ elif selection == 'TIC TAC TOE 💠':
 
     # The main logic of the game
     def game():
+
         # Putting the whole logic program into the try except blocks so it doesn't show any error in the streamlit page
         try:
             # choice to choose between the marker "X" and "O"
@@ -160,11 +160,13 @@ elif selection == 'TIC TAC TOE 💠':
 
             # Giving user 9 chances as the board consist of 9 places
             i = 0
+            displayBoard(tic_tac_board)
             while i < 10:
-                displayBoard(tic_tac_board)
+
                 # Displaying which player turn is it
                 # For user who decides to choose the marker "X"
                 if player_marker == '✖️':
+                    # within the loop turns will change , for a computer to identify which player turn it is
                     if turn == '✖️':
                         st.success("Player 1 turn : " + '✖️' + ". Move to which place ?")
                     else:
@@ -184,26 +186,25 @@ elif selection == 'TIC TAC TOE 💠':
                 if int(players_move) > 9 or players_move == '0':
                     st.info('The Number entered should be between 1 and 9. :: check the template ::')
 
+                # If the user has entered the same key again displaying this
+                if tic_tac_board[players_move] != '__':
+                    st.error('NO.' + players_move + " place is already filled. Choose any other place ?")
+                    players_move = ''
+
                 # updating the value in the board according to which key the user has entered
                 if tic_tac_board[players_move] == '__':
                     tic_tac_board[players_move] = turn
-
+                    displayBoard(tic_tac_board)
                     # Updating counter
                     chance_counter += 1
 
                     # Incrementing the value of i as this is taken as a turn
                     i += 1
 
-                # If the user has entered the same key again displaying this
-                else:
-                    st.error('NO.' + players_move + " place is already filled. Choose any other place ?")
-
                 # Making a if condition as there can be a winner only after 4 chances
                 if chance_counter >= 5:
-
                     # Upper row winning condition
                     if tic_tac_board['1'] == tic_tac_board['2'] == tic_tac_board['3'] != '__':
-                        displayBoard(tic_tac_board)
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
@@ -213,7 +214,6 @@ elif selection == 'TIC TAC TOE 💠':
 
                     # Middle row winning condition
                     elif tic_tac_board['4'] == tic_tac_board['5'] == tic_tac_board['6'] != '__':
-                        displayBoard(tic_tac_board)
 
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
@@ -224,7 +224,6 @@ elif selection == 'TIC TAC TOE 💠':
 
                     # Lower row winning condition
                     elif tic_tac_board['7'] == tic_tac_board['8'] == tic_tac_board['9'] != '__':
-                        displayBoard(tic_tac_board)
 
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
@@ -235,7 +234,6 @@ elif selection == 'TIC TAC TOE 💠':
 
                     # Left column winning condition
                     elif tic_tac_board['1'] == tic_tac_board['4'] == tic_tac_board['7'] != '__':
-                        displayBoard(tic_tac_board)
 
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
@@ -246,7 +244,6 @@ elif selection == 'TIC TAC TOE 💠':
 
                     # Middle column winning condition
                     elif tic_tac_board['2'] == tic_tac_board['5'] == tic_tac_board['8'] != '__':
-                        displayBoard(tic_tac_board)
 
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
@@ -257,7 +254,6 @@ elif selection == 'TIC TAC TOE 💠':
 
                     # right column winning condition
                     elif tic_tac_board['3'] == tic_tac_board['6'] == tic_tac_board['9'] != '__':
-                        displayBoard(tic_tac_board)
 
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
@@ -268,7 +264,6 @@ elif selection == 'TIC TAC TOE 💠':
 
                     # Diagonal1 winning condition
                     elif tic_tac_board['3'] == tic_tac_board['5'] == tic_tac_board['7'] != '__':
-                        displayBoard(tic_tac_board)
 
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
@@ -279,7 +274,7 @@ elif selection == 'TIC TAC TOE 💠':
 
                     # Diagonal2 winning condition
                     elif tic_tac_board['1'] == tic_tac_board['5'] == tic_tac_board['9'] != '__':
-                        displayBoard(tic_tac_board)
+
                         if turn == '✖️':
                             st.text("\nGame Over for : " + '⭕ 😭')
                         else:
@@ -289,7 +284,6 @@ elif selection == 'TIC TAC TOE 💠':
 
                 # Tie condition
                 if chance_counter == 9:
-                    displayBoard(tic_tac_board)
                     st.markdown("### GAME OVER.\n")
                     st.markdown("### It's a TIE !!!")
                     break
@@ -297,6 +291,7 @@ elif selection == 'TIC TAC TOE 💠':
                 # changing the Turn from "X" to "O" and vice versa
                 if turn == '✖️':
                     turn = '⭕'
+
                 else:
                     turn = '✖️'
 
@@ -319,6 +314,7 @@ elif selection == 'TIC TAC TOE 💠':
 
         except Exception:
             pass
+
 
     game()
 # TIC TAC TOE GAME (mobile layout)
@@ -365,7 +361,6 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
 
         pl2.markdown('### 💠 BOARD 💠 ')
 
-
     # The main logic of the game
     def game():
         # Putting the whole logic program into the try except blocks so it doesn't show any error in the streamlit page
@@ -401,7 +396,6 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
                         st.warning("Player 2 turn :" + '✖️' + ". Move to which place ?")
                 # Displaying the board
                 displayBoard(tic_tac_board)
-
 
                 # User's choice to move to which place
                 players_move = st.text_input(f'TURN {i + 1}')
@@ -546,4 +540,8 @@ elif selection == 'TIC TAC TOE 💠 (mobile _layout)':
         except Exception:
             pass
 
+
     game()
+
+elif selection == 'Comments 📝':
+    st_disqus("tic tac toe opinions")
